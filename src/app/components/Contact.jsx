@@ -2,6 +2,7 @@ import { Grid2, Typography } from "@mui/material";
 import React from "react";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -24,17 +25,25 @@ const Contact = () => {
           direction="column"
           alignItems="center"
         >
-          <Typography
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: 1,
-              mt: 2,
-              fontWeight: "300",
-            }}
+          <Link
+            href="mailto:samir.singh@example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
           >
-            <EmailIcon /> samirsingh0075@gmail.com
-          </Typography>
+            <Typography
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
+                mt: 2,
+                fontWeight: "300",
+                color: "#fff !important",
+              }}
+            >
+              <EmailIcon /> samirsingh0075@gmail.com
+            </Typography>
+          </Link>
           <Typography
             sx={{
               display: "flex",
