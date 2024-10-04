@@ -7,6 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { useTheme } from "@emotion/react";
+import Image from "next/image";
 
 const Hero = () => {
 
@@ -187,7 +188,6 @@ const Hero = () => {
       >
         <img
           src="/assets/Samir.png"
-          loading="lazy"
           alt="Picture of the author"
           style={{
             borderRadius: "50%",
@@ -196,7 +196,6 @@ const Hero = () => {
             width: mobileDevice ? "200px" : "350px",
             height: mobileDevice ? "200px" : "350px",
           }}
-          placeholder="blur"
         />
       </Grid2>
     </Grid2>
