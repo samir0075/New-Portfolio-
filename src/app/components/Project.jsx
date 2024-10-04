@@ -1,23 +1,31 @@
+"use client"
+
 import {
   Button,
   Card,
   CardActions,
   CardContent,
-  CardHeader,
-  CardMedia,
   Chip,
   Grid2,
   Tooltip,
   Typography,
+  useTheme,
 } from "@mui/material";
 import React from "react";
 import { PROJECTS } from "../constants";
+import { motion } from "framer-motion";
 
 const Project = () => {
+
+  const theme = useTheme();
   return (
     <>
       <Grid2>
         <Typography
+          component={motion.div}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 2 }}
           sx={{
             textAlign: "center",
             fontWeight: "300",
@@ -39,7 +47,7 @@ const Project = () => {
             <Card
               key={card.id}
               sx={{
-                background: "#181C14 !important",
+                background: `${theme.palette.primary.main}`,
                 width: 250,
                 boxShadow: "-2px -2px 10px #F5F5F7",
                 transform: "scale(1)",
@@ -57,8 +65,7 @@ const Project = () => {
                   overflow: "hidden",
                   fontWeight: "500",
                   fontSize: "1rem",
-                  background:
-                    "linear-gradient(to right, #f8b3d2, #64748b, #a855f7)",
+                  background: `linear-gradient(to right, ${theme.palette.custom.pink}, ${theme.palette.custom.grey}, ${theme.palette.custom.voilet})`,
                   webkitBackgroundClip: "text",
                   backgroundClip: "text",
                   color: "transparent",
@@ -93,8 +100,8 @@ const Project = () => {
                     sx={{
                       fontSize: "0.6rem",
                       fontWeight: "500",
-                      background: "#fff",
-                      color: "#a855f7",
+                      background: `${theme.palette.secondary.main}`,
+                      color: `${theme.palette.custom.voilet}`,
                       m: 1,
                     }}
                     label={tech}

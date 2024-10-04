@@ -1,3 +1,5 @@
+"use client"
+
 import { Grid2, Typography } from "@mui/material";
 import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -5,8 +7,12 @@ import XIcon from "@mui/icons-material/X";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
+import { useTheme } from "@emotion/react";
 
 const Navbar = () => {
+
+  const theme = useTheme();
+
   return (
     <Grid2
       container
@@ -23,14 +29,22 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHubIcon sx={{ color: "#fff" }} />
+          <GitHubIcon sx={{
+            color: `${theme.palette.secondary.main}`, "&:hover": {
+              scale: 1.5
+            }
+          }} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/samir-singh-293b4510b/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <LinkedInIcon sx={{ color: "#fff" }} />
+          <LinkedInIcon sx={{
+            color: `${theme.palette.secondary.main}`, "&:hover": {
+              scale: 1.5
+            }
+          }} />
         </Link>
 
         <Link
@@ -38,10 +52,20 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <XIcon sx={{ color: "#fff" }} />
+          <XIcon sx={{
+            color: "#fff",
+            "&:hover": {
+              scale: 1.5
+            }
+          }} />
         </Link>
 
-        <InstagramIcon sx={{ color: "#fff" }} />
+        <InstagramIcon sx={{
+          color: `${theme.palette.secondary.main}`,
+          "&:hover": {
+            scale: 1.5
+          }
+        }} />
       </Grid2>
     </Grid2>
   );
