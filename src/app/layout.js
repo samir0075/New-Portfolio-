@@ -3,6 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "../app/theme";
 import Head from "next/head";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: "Samir Portfolio"
@@ -21,6 +22,7 @@ export default function RootLayout(props) {
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
           {props.children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
