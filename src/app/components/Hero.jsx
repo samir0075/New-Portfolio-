@@ -131,25 +131,25 @@ const Hero = () => {
 
         <TypeAnimation
           sequence={[
-            'Frontend Developer',
+            'Fullstack Developer',
             3000,
-            'Frontend Develope',
+            'Fullstack Develope',
             500,
-            'Frontend Develop',
+            'Fullstack Develop',
             500,
-            'Frontend Develo',
+            'Fullstack Develo',
             500,
-            'Frontend Devel',
+            'Fullstack Devel',
             500,
-            'Frontend Deve',
+            'Fullstack Deve',
             500,
-            'Frontend Dev',
+            'Fullstack Dev',
             500,
-            'Frontend De',
+            'Fullstack De',
             500,
-            'Frontend D',
+            'Fullstack D',
             500,
-            'Frontend Developer',
+            'Fullstack Developer',
             3000
           ]}
           style={{
